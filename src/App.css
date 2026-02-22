@@ -1,16 +1,15 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f0f7ff, #e8f1ff);
+  /* Pastel Pink + Lavender Background */
+  background: linear-gradient(135deg, #fbc2eb, #e0c3fc);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 /* Full screen center */
 .main {
   min-height: 100vh;
@@ -18,7 +17,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 /* Card */
 .card {
   background: #ffffff;
@@ -30,7 +28,6 @@ body {
   text-align: center;
   transition: 0.3s ease;
 }
-
 /* Top icon */
 .top-icon {
   width: 75px;
@@ -45,7 +42,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 /* Title */
 .title {
   font-size: 26px;
@@ -56,7 +52,6 @@ body {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.5px;
 }
-
 .subtitle {
   margin-top: 8px;
   color: #888;
@@ -72,7 +67,6 @@ body {
   padding: 5px;
   margin-bottom: 25px;
 }
-
 .tab-container button {
   flex: 1;
   border: none;
@@ -81,15 +75,18 @@ body {
   font-weight: 600;
   cursor: pointer;
   border-radius: 10px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  color: #000;
 }
-
-.active-tab {
-  background: #ffffff;
+/* Hover effect */
+.tab-container button:hover {
+  background: #ffe3ef;
+}
+/* Active tab */
+.tab-container button.active-tab {
+  background: #ffe3ef;
   color: #ff2f7d;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.06);
 }
-
 /* Inputs */
 input,
 select {
@@ -104,18 +101,15 @@ select {
   transition: 0.3s;
   color: #333;
 }
-
 input::placeholder {
   color: #999;
 }
-
 input:focus,
 select:focus {
   border: 1px solid #ff2f7d;
   background: #fff;
   box-shadow: 0 0 0 3px rgba(255, 47, 125, 0.1);
 }
-
 /* Calculate Button */
 .calculate-btn {
   width: 100%;
@@ -128,17 +122,14 @@ select:focus {
   cursor: pointer;
   transition: 0.3s ease;
 }
-
 .calculate-btn:hover {
   transform: translateY(-2px);
 }
-
 .calculate-btn:disabled {
   background: #ff9cc0;
   cursor: not-allowed;
   transform: none;
 }
-
 /* Reset Button */
 .reset-btn {
   width: 100%;
@@ -151,12 +142,10 @@ select:focus {
   cursor: pointer;
   transition: 0.3s;
 }
-
 .reset-btn:hover {
   background: #e4e4e8;
 }
-
-/* Result Box */
+/* Result Box - Green */
 .result-box {
   margin-top: 20px;
   background: #e8f5e9;
@@ -165,10 +154,8 @@ select:focus {
   text-align: left;
   border: 1px solid rgba(46, 125, 50, 0.15);
   box-shadow: 0 8px 20px rgba(46, 125, 50, 0.08);
-
   animation: fadeInUp 0.5s ease-out forwards;
 }
-
 .result-row {
   display: flex;
   justify-content: space-between;
@@ -176,8 +163,7 @@ select:focus {
   color: #2e7d32;
   margin-bottom: 8px;
 }
-
-/* Smooth Fade Animation */
+/* Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -188,14 +174,12 @@ select:focus {
     transform: translateY(0);
   }
 }
-
 /* Responsive */
 @media (max-width: 480px) {
   .card {
     width: 95%;
     padding: 24px;
   }
-
   .title {
     font-size: 22px;
   }
